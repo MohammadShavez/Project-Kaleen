@@ -1,33 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i> </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="public_files/about_us.html">About US</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="">Contact US</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav> 
-    </header>
-</body>
-</html>
+
+
+
+<div id="header"></div>
+
+<main>
+  <div class="container">
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <img src="../Images/about-us-image.jpg" alt="About Us Image" >
+      </div>
+      <div class="col-sm-6">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem corrupti inventore totam consequatur nisi corporis similique, dolore reiciendis. Laboriosam explicabo iure ut doloremque quaerat iusto neque rem aliquam recusandae ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aperiam repudiandae, maiores tenetur ea consequatur rem rerum quibusdam, nihil deserunt necessitatibus tempore odio dicta, pariatur reiciendis ex iusto ipsum earum.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer"></div>
+
+
+
+
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+        
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
